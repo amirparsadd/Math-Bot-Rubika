@@ -30,8 +30,6 @@ async def validation_middleware(message: Updates):
 def main():
     bot=Client(name="MathBot")
 
-    @bot.action_on_message_reaction
-
     @bot.on_message_updates()
     async def help(message: Updates):
         validation_result = await validation_middleware(message)
