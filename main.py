@@ -32,9 +32,6 @@ def main():
 
     @bot.on_message_updates()
     async def help(message: Updates):
-        validation_result = await validation_middleware(message)
-        if not validation_result: return
-
         if(message.text == "?" or message.text == "؟"):
             await message.reply(HELP_TEXT)
             return
